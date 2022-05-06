@@ -1,14 +1,19 @@
 class Ball:
 
-    def __init__(self, x_coord, y_coord, radius=8):
+    def __init__(self, x_coord, y_coord, radius=8, mass=1):
         # size of ball
-        self.r = radius
+        self._r = radius
         # position of ball
         self.x = x_coord
         self.y = y_coord
         # velocity of ball
         self.dx = 0
         self.dy = 0
+        self.m = mass
+
+    @property
+    def r(self):
+        return self._r
 
     def move(self):
         self.x += self.dx
@@ -20,6 +25,3 @@ class Ball:
 
     def get_position(self):
         return (self.x, self.y)
-
-    def collision(self):
-        pass

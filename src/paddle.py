@@ -10,3 +10,4 @@ class Paddle:
 
     def move(self, addY):
         self.y += addY
+    
