@@ -1,6 +1,6 @@
 class Paddle:
 
-    def __init__(self, x, y, width=2, length=28):
+    def __init__(self, x, y, width=8, length=50):
         # size of the paddle
         self.l = length
         self.w = width
@@ -11,3 +11,5 @@ class Paddle:
     def move(self, addY):
         self.y += addY
     
+    def get_dimensions(self):
+        return self.w, self.l
